@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9fb;
+    color: #4b0082;
+}
+
+.container {
+    background-color: #ffffff;
+    margin-top: 50px;
+    border-radius: 12px;
+    min-height: 100vh;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.2);
+}
+
+h1.text-purple {
+    color: #4b0082;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.box {
+    background-color: #f3e8ff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    color: #4b0082;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 60px;
+    box-shadow: 0 2px 8px rgba(75, 0, 130, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #d6b3ff;
+}
+
+.grey {
+    color: #6a4baf;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-purple {
+    background-color: #6a4baf;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-purple:hover {
+    background-color: #4b0082;
+    color: white;
+}
+
+@media (max-width: 354px) {
+    .box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    a {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 265px) {
+    .box {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+}
+
+button {
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    background-color: #6a4baf;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b0082;
+}
+
+.add-box {
+    background-color: #f3e8ff;
+    padding: 30px;
+    border-radius: 12px;
+    color: #4b0082;
+    margin: 50px 60px;
+    height: 52vh;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(75, 0, 130, 0.15);
+}
+
+.home-page {
+    margin: 10px 0;
+    width: 123px;
+    background-color: #6a4baf;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.home-page:hover {
+    background-color: #4b0082;
+    color: white;
+}
+
+@media(max-width:280px) {
+    .home-page {
+        width: 85px;
+    }
+}
+
+/* next and previous buttons */
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #d6b3ff;
+    color: #4b0082;
+}
+
+.previous {
+    background-color: #f3e8ff;
+    color: #4b0082;
+}
+
+.next {
+    background-color: #6a4baf;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+/* Navbar styles */
+.navbar.bg-purple {
+    background-color: #6a4baf !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #d6b3ff;
+}
+
+/* Todo item done style */
+.todo-item.done .box {
+    background-color: #b19cd9;
+    color: white;
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}

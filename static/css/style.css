@@ -20,6 +20,8 @@ body {
     box-shadow: 0 4px 15px rgba(75, 0, 130, 0.2);
 }
 
+
+
 h1.text-purple {
     color: #4b0082;
     font-weight: 700;
@@ -50,7 +52,7 @@ h1.text-purple {
 }
 
 .btn-purple {
-    background-color: #6a4baf;
+    background-color:  #4b0082;
     color: white;
     border: none;
     padding: 10px 25px;
@@ -61,7 +63,7 @@ h1.text-purple {
 }
 
 .btn-purple:hover {
-    background-color: #4b0082;
+    background-color: #6a4baf;;
     color: white;
 }
 
@@ -106,7 +108,7 @@ button:hover {
     border-radius: 12px;
     color: #4b0082;
     margin: 50px 60px;
-    height: 52vh;
+    height: 100%;
     text-align: left;
     box-shadow: 0 2px 8px rgba(75, 0, 130, 0.15);
 }
@@ -168,7 +170,7 @@ a:hover {
 
 /* Navbar styles */
 .navbar.bg-purple {
-    background-color: #6a4baf !important;
+    background-color: #573a94 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -190,3 +192,13 @@ a:hover {
     opacity: 0.7;
     transition: all 0.3s ease;
 }
+
+#typed {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.text-purple {
+  color: #6f42c1; /* Bootstrap's purple */
+}
+

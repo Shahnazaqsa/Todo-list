@@ -1,100 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static',filename ='css/style.css')}}"
-    />
-  </head>
+{% extends "base.html" %} {%block body%} {%if current_user.is_authenticated%}
+<h1>Hello {{current_user.name}}</h1>
+{%endif%}
+<h1 class="my-4 text-purple"><span id="typed"></span></h1>
+<div
+  class="text-white text-center d-flex align-items-center justify-content-center rounded shadow"
+  style="background: url('{{ url_for('static', filename='media/home.png') }}') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            position: relative;
+            width: 100%;"
+>
+  <div
+    style="
+      position: absolute;
+      z-index: 1;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+      font-size: 2rem;
+    "
+  >
+    <h1><span id="typed"></span></h1>
+  </div>
+</div>
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Todo List</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/add">Add Todo</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <h1 class="my-4 text-purple">My Todo-s</h1>
-      <div class="box">
-        <div class="grey">Add New...</div>
-        <div>
-          <a href="/add" target="_blank" class="btn btn-purple">ADD</a>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <input
-          type="text"
-          id="searchInput"
-          class="form-control"
-          placeholder="Search todos..."
-        />
-      </div>
-
-      {% for item in todo_list%}
-
-      <div
-        class="center todo-item"
-        data-title="{{ item.title }}"
-        data-desc="{{ item.desc }}"
-      >
-        <div class="box">
-          <div>
-            <input
-              type="checkbox"
-              class="mark-done"
-              data-sno="{{ item.sno }}"
-            />
-            <strong> . {{ item.title }} - </strong> {{ item.desc }}
-          </div>
-          <a
-            href="/delete/{{item.sno}}"
-            class="fas fa-trash-alt delete-todo"
-          ></a>
-        </div>
-      </div>
-
-      {% endfor %}
-
-      <a href="{{prev}}" class="previous">&laquo; Previous</a>
-      <a href="{{next}}" class="next">Next &raquo;</a>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  </body>
-</html>
+{%endblock%}

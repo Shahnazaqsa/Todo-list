@@ -41,3 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+  var typed = new Typed("#typed", {
+    strings: [
+      "Plan your day with focus",
+      "Track your todos like a pro",
+      "Stay organized, stay sharp"
+    ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+
+
+
+  
+
